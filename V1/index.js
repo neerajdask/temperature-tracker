@@ -38,10 +38,8 @@ class TempTracker {
         this.sum += value;
         this.getHighestTemp();
         this.getLowestTemp();
-        // this.getHighestTemp(value);
-        // this.getLowestTemp(value);
         this.getAvgTemp();
-        this.updateTemperatures(value);
+        this.updateTemperatures();
     }
 
     /**

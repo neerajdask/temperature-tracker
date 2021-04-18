@@ -1,6 +1,6 @@
 class TempTracker {
     temperatures = [];
-    newTemperature = 0;
+    newTemperature = null;
     maxTemperature = 0;
     minTemperature = 0;
     avgTemperature = 0;
@@ -14,9 +14,10 @@ class TempTracker {
     avgTemp = document.getElementById('avgTemp');
     tempInput = document.getElementById('tempInput');
     updateBtn = document.getElementById('updateTemp');
+    tempList = document.getElementById('tempList');
 
     constructor() {
-        this.temperatures = [-2, -1, 0, 1, 2];
+        this.temperatures = [1, 2, 3];
         this.maxTemperature = this.temperatures[0];
         this.minTemperature = this.temperatures[0];
         this.avgTemperature = 0;
@@ -39,6 +40,8 @@ class TempTracker {
 
     initialize() {
         for (let i = 0; i < this.temperatures.length; i++) {
+            this.addListElement(this.temperatures[i]);
+
             if (this.temperatures[i] > this.maxTemperature) {
                 this.maxTemperature = this.temperatures[i];
             }
@@ -127,6 +130,16 @@ class TempTracker {
         this.highTemp.textContent = `${this.maxTemperature}°C`;
         this.lowTemp.textContent = `${this.minTemperature}°C`;
         this.avgTemp.textContent = `${this.avgTemperature}°C`;
+
+        this.addListElement(this.newTemperature);
+    }
+
+    addListElement(item) {
+        if (item) {
+            const element = document.createElement('li');
+            element.textContent = `${item}°C`;
+            this.tempList.appendChild(element);
+        }
     }
 }
 
