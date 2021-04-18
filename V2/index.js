@@ -51,7 +51,7 @@ class TempTracker {
             }
             this.sum = this.sum + this.temperatures[i];
         }
-        this.average = this.sum / this.temperatures.length;
+        this.avgTemperature = this.sum / this.temperatures.length;
 
         this.updateValues();
     }
