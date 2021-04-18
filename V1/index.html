@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <meta
+            name="author"
+            content="Neeraj Das K, iamneerajdas@gmail.com"
+        />
+        <meta
+            name="description"
+            content="A simple JavaScript script to calculate and display the largest, smallest and average temperaure from a tracker class."
+        />
+        <title>Desygner Challenge</title>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <label for="tempInput"
+                    >Enter the temperature (°C):</label
+                >
+                <input type="text" id="tempInput" />
+                <button id="updateTemp">Add temperature</button>
+            </div>
+            <div>
+                <h4>Highest Temperature:</h4>
+                <span id="highTemp"></span>
+                <h4>Lowest Temperature:</h4>
+                <span id="lowTemp"></span>
+                <h4>Average Temperature:</h4>
+                <span id="avgTemp"></span>
+            </div>
+
+            <div>
+                <h4>Your temperatures:</h4>
+                <ul id="tempList"></ul>
+            </div>
+        </div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
